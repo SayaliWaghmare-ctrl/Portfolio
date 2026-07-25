@@ -6,87 +6,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap"  rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 <title>My Skill Set</title>
 </head>
-
-<script>
-const cards = document.querySelectorAll(".skill");
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-
-        console.log(entry.target);   // Debug
-
-        if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-        }
-
-    });
-}, {
-    threshold: 0.1
-});
-
-cards.forEach(card => observer.observe(card));
-</script>
-
-
 <body>
 
 <div class="container">
 
-    <p class="title">
+    <p class="title intro-title" >
      <i class="fa-solid fa-cubes"></i>
         Explore
     </p>
-     <h1 class="skills">
+     <h1 class="skills intro-heading">
          My <span> Skill Set </span>
      </h1><br><br><br>
 
-    <!-- Top Cards -->
-   <!--  <div class="top-cards">
-
-        <div class="card">
-            <div class="icon">
-                <i class="fas fa-network-wired"></i>
-            </div>
-            <h3>Linux & Networking</h3>
-            <p>
-                Strong foundation in Linux systems, cloud computing,
-                and network management.
-            </p>
-        </div>
-
-        <div class="card active">
-            <div class="icon">
-                <i class="fas fa-lock"></i>
-            </div>
-            <h3>Information Security</h3>
-            <p>
-                Security and data protection are at the core of my
-                digital work.
-            </p>
-        </div>
-
-        <div class="card">
-            <div class="icon">
-                <i class="fas fa-laptop-code"></i>
-            </div>
-            <h3>Software Development</h3>
-            <p>
-                Design and develop efficient and scalable software
-                solutions.
-            </p>
-        </div>
-
-    </div> -->
-
-    <!-- Backend -->
-    <section>
+    <section class="programming-section">
         <h2>Programming Languages</h2>
 
         <div class="skills-grid">
 
-            <div class="skill">
+            <div class="skill"  data-aos="fade-up">
                 <div class="skill-head">
                     <span class="skill-name">
                        <i class="fa-brands fa-java"></i>
@@ -99,7 +39,7 @@ cards.forEach(card => observer.observe(card));
                 </div>
             </div>
 
-            <div class="skill">
+            <div class="skill"  data-aos="fade-up">
                 <div class="skill-head">
                     <span class="skill-name">
                        <i class="fa-brands fa-python"></i>
@@ -110,7 +50,7 @@ cards.forEach(card => observer.observe(card));
                 <div class="bar"><div style="width:95%"></div></div>
             </div>
 
-            <div class="skill">
+            <div class="skill" data-aos="fade-up">
                 <div class="skill-head">
                     <span class="skill-name">
                        <i class="fa-solid fa-database"></i>
@@ -121,7 +61,7 @@ cards.forEach(card => observer.observe(card));
                 <div class="bar"><div style="width:90%"></div></div>
             </div>
 
-            <div class="skill">
+            <div class="skill"  data-aos="fade-up">
                 <div class="skill-head">
                     <span class="skill-name">
                        <i class="fa-brands fa-html5"></i>
@@ -132,7 +72,7 @@ cards.forEach(card => observer.observe(card));
                 <div class="bar"><div style="width:100%"></div></div>
             </div>
 
-            <div class="skill">
+            <div class="skill"  data-aos="fade-up">
                 <div class="skill-head">
                     <span class="skill-name">
                        <i class="fa-brands fa-css3-alt"></i>
@@ -143,7 +83,7 @@ cards.forEach(card => observer.observe(card));
                 <div class="bar"><div style="width:75%"></div></div>
             </div>
 
-            <div class="skill">
+            <div class="skill"  data-aos="fade-up">
                 <div class="skill-head">
                     <span class="skill-name">
                        <i class="fa-brands fa-js"></i>
@@ -154,7 +94,7 @@ cards.forEach(card => observer.observe(card));
                 <div class="bar"><div style="width:80%"></div></div>
             </div>
             
-            <div class="skill">
+            <div class="skill"  data-aos="fade-up">
                 <div class="skill-head">
                     <span class="skill-name">
                        <i class="fields-input"></i>
@@ -168,62 +108,83 @@ cards.forEach(card => observer.observe(card));
     </section>
 
     <!-- Software -->
-    <section>
+    <section class="software-section">
         <h2>Softwares</h2>
 
         <div class="skills-grid">
 
-            <div class="skill">
+            <div class="skill"  data-aos="zoom-in">
                 <div class="skill-head">
+                <span class="skill-name">
+                  <i class="fa-solid fa-paper-plane"></i>
                     <span>Postman</span>
+                </span> 
                     <!-- <span>80%</span> -->
                 </div>
                 <div class="bar"><div style="width:80%"></div></div>
             </div>
 
-            <div class="skill">
+            <div class="skill"  data-aos="zoom-in">
                 <div class="skill-head">
+                 <span class="skill-name">
+                  <i class="fa-solid fa-gears"></i>
                     <span>Jenkins</span>
+                  </span>  
                    <!--  <span>95%</span> -->
                 </div>
                 <div class="bar"><div style="width:95%"></div></div>
             </div>
 
-            <div class="skill">
+            <div class="skill"  data-aos="zoom-in">
                 <div class="skill-head">
+                  <span class="skill-name">
+                    <i class="fa-brands fa-github"></i>
                     <span>GitHub</span>
+                  </span>  
                    <!--  <span>90%</span> -->
                 </div>
                 <div class="bar"><div style="width:90%"></div></div>
             </div>
             
-            <div class="skill">
+            <div class="skill"  data-aos="zoom-in">
                 <div class="skill-head">
+                  <span class="skill-name">
+                    <i class="fa-solid fa-server"></i>
                     <span>Tomcat Server</span>
+                  </span>  
                     <!-- <span>90%</span> -->
                 </div>
                 <div class="bar"><div style="width:90%"></div></div>
             </div>
             
-            <div class="skill">
+            <div class="skill"  data-aos="zoom-in">
                 <div class="skill-head">
+                  <span class="skill-name">
+                    <i class="fa-solid fa-network-wired"></i>
                     <span>Websphere</span>
+                  </span>  
                    <!--  <span>90%</span> -->
                 </div>
                 <div class="bar"><div style="width:90%"></div></div>
             </div>
             
-            <div class="skill">
+            <div class="skill"  data-aos="zoom-in">
                 <div class="skill-head">
+                  <span class="skill-name">
+                    <i class="fa-brands fa-jira"></i>
                     <span>Jira</span>
+                  </span>  
                    <!--  <span>90%</span> -->
                 </div>
                 <div class="bar"><div style="width:90%"></div></div>
             </div>
             
-            <div class="skill">
+            <div class="skill"  data-aos="zoom-in">
                 <div class="skill-head">
+                  <span class="skill-name">
+                     <i class="fa-solid fa-shield-halved"></i>
                     <span>SonarQube</span>
+                  </span>   
                    <!--  <span>90%</span> -->
                 </div>
                 <div class="bar"><div style="width:90%"></div></div>
@@ -293,6 +254,15 @@ cards.forEach(card => observer.observe(card));
 </div>
 
 </div>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init({
+    duration:800,
+    once:true
+});
+</script>
 
 </body>
 </html>

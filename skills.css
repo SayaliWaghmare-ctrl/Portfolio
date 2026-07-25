@@ -53,7 +53,10 @@ body{
 
 .skill:hover .skill-name i{
 
-    animation:bounce .8s;
+	transform:translateY(-10px) scale(1.03);
+    border-color:#98ff78;
+    box-shadow:0 10px 25px rgba(152,255,120,.25);
+   /*  animation:bounce .8s; */
 }
 
 @keyframes bounce{
@@ -76,22 +79,8 @@ transform:translateY(0);
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 .skill:hover{
-    transform:translateY(-10px) scale(1.03);
-    border-color:#98ff78;
+    transform:translateY(-8px) scale(1.03);
     box-shadow:0 10px 25px rgba(152,255,120,.25);
 }
 
@@ -213,11 +202,44 @@ section:hover h2::after{
     border:1px solid transparent;
     transition:all .4s ease;
     cursor:pointer;
-    animation:floating 5s ease-in-out infinite;
-    opacity:1;
-    transform:translateY(50px);
-    transition:all .7s ease;
+    opacity:0;
+    transform:scale(0.7);
+    animation:cardIntro .6s ease forwards;
 }
+
+
+.skill:nth-child(1){ animation-delay:.1s; }
+.skill:nth-child(2){ animation-delay:.2s; }
+.skill:nth-child(3){ animation-delay:.3s; }
+.skill:nth-child(4){ animation-delay:.4s; }
+.skill:nth-child(5){ animation-delay:.5s; }
+.skill:nth-child(6){ animation-delay:.6s; }
+.skill:nth-child(7){ animation-delay:.7s; }
+
+.skill:nth-child(1){ animation-delay:.1s; }
+.skill:nth-child(2){ animation-delay:.2s; }
+.skill:nth-child(3){ animation-delay:.3s; }
+.skill:nth-child(4){ animation-delay:.4s; }
+.skill:nth-child(5){ animation-delay:.5s; }
+.skill:nth-child(6){ animation-delay:.6s; }
+.skill:nth-child(7){ animation-delay:.7s; }
+
+@keyframes cardIntro{
+    0%{
+        opacity:0;
+        transform:scale(.7);
+    }
+
+    70%{
+        transform:scale(1.05);
+    }
+
+    100%{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
 
 .skill.show{
     opacity:1;
@@ -256,15 +278,6 @@ transform:translateY(0);
     overflow:hidden;
 }
 
-/* .bar div{
-    height:100%;
-    background:linear-gradient(
-        90deg,
-        #61ff61,
-        #c5ff5c
-    );
-    border-radius:20px;
-} */
 
 .languages-section {
     margin-top: 50px;
@@ -464,3 +477,122 @@ transform:translateY(0);
     background:#98ff78;
     color:#000;
  }
+
+
+/* Initial hidden state */
+
+.intro-title,
+.intro-heading,
+.programming-section,
+.software-section,
+.languages-section,
+.menu{
+    opacity:0;
+}
+ 
+/*  Add Animation */
+ 
+ .intro-title{
+    animation:fadeDown .8s ease forwards;
+}
+
+.intro-heading{
+    animation:zoomIn .8s ease forwards;
+    animation-delay:.5s;
+}
+
+.programming-section{
+    animation:slideLeft .8s ease forwards;
+    animation-delay:1.3s;
+}
+
+.software-section{
+    animation:slideRight .8s ease forwards;
+    animation-delay:2.2s;
+}
+
+.languages-section{
+    animation:fadeUp .8s ease forwards;
+    animation-delay:3.1s;
+}
+
+.menu{
+    animation:zoomIn .8s ease forwards;
+    animation-delay:4s;
+}
+ 
+/*  Add keyframes */
+ 
+ @keyframes fadeDown{
+
+    from{
+        opacity:0;
+        transform:translateY(-50px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+@keyframes zoomIn{
+
+    from{
+        opacity:0;
+        transform:scale(.6);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+
+}
+
+@keyframes slideLeft{
+
+    from{
+        opacity:0;
+        transform:translateX(-100px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+
+}
+
+@keyframes slideRight{
+
+    from{
+        opacity:0;
+        transform:translateX(100px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(80px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+ 
+ 
+ 
+ 
