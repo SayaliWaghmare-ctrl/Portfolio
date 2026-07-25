@@ -8,6 +8,28 @@
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap"  rel="stylesheet">
 <title>My Skill Set</title>
 </head>
+
+<script>
+const cards = document.querySelectorAll(".skill");
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+
+        console.log(entry.target);   // Debug
+
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        }
+
+    });
+}, {
+    threshold: 0.1
+});
+
+cards.forEach(card => observer.observe(card));
+</script>
+
+
 <body>
 
 <div class="container">
@@ -66,15 +88,23 @@
 
             <div class="skill">
                 <div class="skill-head">
-                    <span>Java</span>
+                    <span class="skill-name">
+                       <i class="fa-brands fa-java"></i>
+                             Java
+                    </span>
                    <!--  <span>80%</span> -->
                 </div>
-                <div class="bar"><div style="width:80%"></div></div>
+                <div class="bar">
+                  <div class="progress" data-width="80%"></div>
+                </div>
             </div>
 
             <div class="skill">
                 <div class="skill-head">
-                    <span>Python</span>
+                    <span class="skill-name">
+                       <i class="fa-brands fa-python"></i>
+                             Python
+                    </span>
                     <!-- <span>95%</span> -->
                 </div>
                 <div class="bar"><div style="width:95%"></div></div>
@@ -82,7 +112,10 @@
 
             <div class="skill">
                 <div class="skill-head">
-                    <span>MySQL</span>
+                    <span class="skill-name">
+                       <i class="fa-solid fa-database"></i>
+                             MySQL
+                    </span>
                     <!-- <span>90%</span> -->
                 </div>
                 <div class="bar"><div style="width:90%"></div></div>
@@ -90,7 +123,10 @@
 
             <div class="skill">
                 <div class="skill-head">
-                    <span>HTML5</span>
+                    <span class="skill-name">
+                       <i class="fa-brands fa-html5"></i>
+                             HTML
+                    </span>
                     <!-- <span>100%</span> -->
                 </div>
                 <div class="bar"><div style="width:100%"></div></div>
@@ -98,7 +134,10 @@
 
             <div class="skill">
                 <div class="skill-head">
-                    <span>CSS</span>
+                    <span class="skill-name">
+                       <i class="fa-brands fa-css3-alt"></i>
+                             CSS
+                    </span>
                     <!-- <span>75%</span> -->
                 </div>
                 <div class="bar"><div style="width:75%"></div></div>
@@ -106,7 +145,10 @@
 
             <div class="skill">
                 <div class="skill-head">
-                    <span>JavaScript</span>
+                    <span class="skill-name">
+                       <i class="fa-brands fa-js"></i>
+                             JavaScript
+                    </span>
                    <!--  <span>80%</span> -->
                 </div>
                 <div class="bar"><div style="width:80%"></div></div>
@@ -114,7 +156,10 @@
             
             <div class="skill">
                 <div class="skill-head">
-                    <span>AS400</span>
+                    <span class="skill-name">
+                       <i class="fields-input"></i>
+                             AS400
+                    </span>
                    <!--  <span>80%</span> -->
                 </div>
                 <div class="bar"><div style="width:80%"></div></div>

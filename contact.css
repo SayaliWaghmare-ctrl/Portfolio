@@ -223,8 +223,7 @@ body{
     overflow:hidden;
     position:relative;
     transition:.3s;
- /*   animation:pulse 2.5s infinite; */
-     opacity:0;
+    opacity:0;
     animation:buttonPop .7s ease forwards;
     animation-delay:1.4s;
     
@@ -426,6 +425,13 @@ box-shadow:0 0 0 rgba(124,255,107,0);
     color:#98ff8b;
     font-weight:600;
     word-break:break-word;
+}
+
+.info a{
+    color:#98ff8b;          /* Same green as Phone & Email */
+    text-decoration:none;   /* Remove underline */
+    font-weight:600;
+    transition:0.3s;
 }
 
 @media(max-width:768px){

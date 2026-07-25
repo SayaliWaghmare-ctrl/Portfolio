@@ -37,6 +37,64 @@ body{
     text-align:center;
 }
 
+
+/* Animation */
+.skill-name{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    transition:.4s;
+}
+
+.skill-name i{
+    color:#98ff78;
+    transition:.4s;
+}
+
+.skill:hover .skill-name i{
+
+    animation:bounce .8s;
+}
+
+@keyframes bounce{
+
+0%{
+transform:translateY(0);
+}
+
+30%{
+transform:translateY(-8px);
+}
+
+60%{
+transform:translateY(3px);
+}
+
+100%{
+transform:translateY(0);
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.skill:hover{
+    transform:translateY(-10px) scale(1.03);
+    border-color:#98ff78;
+    box-shadow:0 10px 25px rgba(152,255,120,.25);
+}
+
 .skills span{
     color:#98ff78;
 }
@@ -119,7 +177,28 @@ section h2{
     margin-bottom:20px;
     border-left:4px solid #61ff61;
     padding-left:10px;
+    position:relative;
 }
+
+section h2::after{
+
+    content:"";
+    position:absolute;
+    bottom:-6px;
+    left:10px;
+    width:0;
+    height:2px;
+    background:#98ff78;
+    transition:.6s;
+
+}
+
+section:hover h2::after{
+
+    width:250px;
+
+}
+
 
 .skills-grid{
     display:grid;
@@ -131,7 +210,37 @@ section h2{
     background:#15181f;
     border-radius:10px;
     padding:15px;
+    border:1px solid transparent;
+    transition:all .4s ease;
+    cursor:pointer;
+    animation:floating 5s ease-in-out infinite;
+    opacity:1;
+    transform:translateY(50px);
+    transition:all .7s ease;
 }
+
+.skill.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+
+@keyframes floating{
+
+0%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-5px);
+}
+
+100%{
+transform:translateY(0);
+}
+
+}
+
 
 .skill-head{
     display:flex;
@@ -174,7 +283,18 @@ section h2{
     align-items: flex-start;
     gap: 18px;
     margin-bottom: 35px;
+    padding:15px;
+    border-radius:12px;
+    transition:.4s;
 }
+
+.language-item:hover{
+
+    background:#15181f;
+    transform:translateX(10px);
+
+}
+
 
 .language-content h3 {
     color: #fff;
@@ -202,8 +322,14 @@ section h2{
     border-radius: 50%;
     flex-shrink: 0;
     box-shadow: 0 0 12px rgba(255,255,255,.08);
+    transition:.5s;
 }
 
+.language-item:hover .flag{
+
+    transform:rotate(360deg) scale(1.1);
+
+}
 /* Morocco */
 
  .morocco {
